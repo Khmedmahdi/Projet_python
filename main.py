@@ -33,10 +33,10 @@ def main():
     print("Population initialisée avec succès.")
 
     # Évaluation initiale des individus
-    print("Évaluation initiale des individus dans la population...")
+    print("Début de l'évaluation des individus...")
     for ind in population.individuals:
         evaluate(ind, weights, profits, capacities, num_objectives)
-        print(f"Individu évalué : Objectif 1 = {ind.f[0]}, Objectif 2 = {ind.f[1]}")
+        print(f"Individu : {ind.Items}, Objectifs : {ind.f}")
     print("Évaluation terminée.")
 
     # Extraction des solutions non dominées

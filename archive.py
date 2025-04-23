@@ -13,9 +13,11 @@ def extractPtoArchive(population, archive):
         # Vérifier si l'individu est dominé par un autre individu de l'archive
         for archive_ind in archive.individuals:
             if dominates(archive_ind, ind, len(ind.f)):
+                print(f"L'individu {archive_ind} domine {ind}")
                 is_dominated = True
                 break
             elif dominates(ind, archive_ind, len(ind.f)):
+                print(f"L'individu {ind} domine {archive_ind}")
                 to_remove.append(archive_ind)
 
         # Si l'individu n'est pas dominé, l'ajouter à l'archive
