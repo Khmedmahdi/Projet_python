@@ -1,11 +1,6 @@
 def evaluate(ind, weights, profits, capacities, num_objectives):
     """
     Évalue un individu en calculant les deux objectifs.
-    :param ind: Individu à évaluer
-    :param weights: Liste des poids des items
-    :param profits: Liste des profits des items
-    :param capacities: Liste des capacités des sacs
-    :param num_objectives: Nombre d'objectifs
     """
     ind.f = [0.0] * num_objectives  # Initialiser les objectifs à zéro
 
@@ -13,9 +8,9 @@ def evaluate(ind, weights, profits, capacities, num_objectives):
         total_weight = 0
         total_profit = 0
 
-        # Calculer le poids total et le profit total pour l'objectif i
-        for j in range(len(ind.solution)):
-            if ind.solution[j] == 1:  # Si l'item est sélectionné
+        # Utilisez ind.Items au lieu de ind.solution
+        for j in range(len(ind.Items)):
+            if ind.Items[j] == 1:  # Si l'item est sélectionné
                 total_weight += weights[i][j]
                 total_profit += profits[i][j]
 
