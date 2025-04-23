@@ -1,0 +1,26 @@
+{
+    "python.pythonPath": "python3", // Change this if you are using a virtual environment
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.formatting.provider": "black",
+    "python.testing.unittestEnabled": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.nosetestsEnabled": false,
+    "files.associations": {
+      "*.h": "c",
+      "*.c": "c"
+    },
+    "C_Cpp.default.configurationProvider": "ms-vscode.cmake-tools",
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.default.includePath": [
+      "${workspaceFolder}/include",
+      "/usr/include",
+      "/usr/local/include"
+    ],
+    "C_Cpp.default.defines": [],
+    "C_Cpp.default.compilerPath": "/usr/bin/gcc", // Change to your compiler path if necessary
+    "C_Cpp.default.cStandard": "c11",
+    "C_Cpp.default.cppStandard": "c++17",
+    "terminal.integrated.defaultProfile.linux": "bash", // Or "zsh" depending on your terminal
+    "editor.formatOnSave": true
+  }
